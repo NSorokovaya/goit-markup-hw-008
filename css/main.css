@@ -331,9 +331,14 @@ body {
 /*contact-nav*/
 .contact-nav {
   display: flex;
-  margin-left: auto;
+  margin-left: 96px;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav {
+    margin-left: auto;
+  }
 }
 
 .contact-nav__list {
@@ -585,6 +590,7 @@ body {
 }
 @media screen and (max-width: 320px) {
   .modal {
+    width: 290px;
     height: 80%;
   }
 }
@@ -719,9 +725,9 @@ body {
 }
 
 .checkbox {
+  display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 10px;
   background: var(--white);
   border: 2px solid #212121;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -730,18 +736,21 @@ body {
 }
 
 .checkbox-form {
-  width: 346px;
+  display: block;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--primary-text-color);
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .checkbox-form {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .checkbox-form__label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  display: inline-block;
   gap: 8.38px;
 }
 .checkbox-form__input {

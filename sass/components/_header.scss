@@ -73,9 +73,12 @@
 /*contact-nav*/
 .contact-nav {
       display: flex;
-      margin-left: auto;
+      margin-left: 96px;
       padding-top: 18px;
       padding-bottom: 18px;
+      @media screen and(min-width:1200px) {
+            margin-left: auto;
+      }
 }
 
 .contact-nav__list {
