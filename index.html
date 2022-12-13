@@ -22,10 +22,7 @@
           </div>
           <button
             type="button"
-            class="mobile-button__menu"
-            data-menu-button
-            aria-expanded="false"
-            aria-controls="mobile-menu"
+            class="mobile-button__menu js-open-menu"
           >
             <svg
               class="mobile-button__icon"
@@ -34,7 +31,6 @@
               aria-label="Переключатель мобильного меню"
             >
               <use class="icon-menu" href="./images/mobile-icons.svg#icon-menu_40px"></use>
-              <use class="icon-close" href="./images/mobile-icons.svg#icon-close_40px"></use>
             </svg>
           </button>
 
@@ -134,7 +130,7 @@
           </ul>
         </div>
       </section>
-      <section class="section hidden">
+      <section class="task section hidden">
         <div class="container">
           <h2 class="task__title">Чим ми займаємося</h2>
           <ul class="task">
@@ -440,7 +436,10 @@
         </div>
       </div>
     </footer>
-    <div class="mobile-menu" data-menu id="mobile-menu">
+
+
+
+    <div class="mobile-menu"  class="js-menu-container">
         <div class="mobile-menu__block">
 
             <nav class="navigation-mobile">
@@ -454,7 +453,12 @@
                     <li class="nav-links__item--mobile"><a href="" class="nav-links__link--mobile">Контакти</a></li>
                 </ul>
             </nav>
+<button class="js-close-menu">
+                <svg width="40" height="40" aria-label="кнопка">
+                  <use class="icon-close" href="./images/mobile-icons.svg#icon-close_40px"></use>
 
+                </svg>
+</button>
 
             <div class="mobile-menu__block--contacts">
 
@@ -500,6 +504,7 @@
             <use href="./images/symbol-defs.svg#icon-close-button"></use>
           </svg>
         </button>
+
         <div class="modal-thumb">
           <h2 class="modal-thumb__title">Залиште свої дані, ми вам передзвонимо</h2>
           <form class="modal-form">
