@@ -6,12 +6,14 @@
       display: block;
 }
 
-.mobile-button__menu.is-open .icon-menu {
+.mobile-button__menu .icon-menu{
+      display: block;
+}
+.mobile-button__icon.is-open .icon-menu {
       display: none;
 }
 
 .mobile-button__menu {
-      z-index: 1;
       display: flex;
       justify-content: flex-end;
       padding: 0;
@@ -42,6 +44,19 @@
       height: 60px;
 }
 /*МОДАЛЬНЕ ВІКНО ХЕДЕРА В МОБІЛЬНІЙ ВЕРСІІ*/
+.js-close-menu{
+      position: absolute;
+            display: flex;
+            right: 15px;
+            top: 10px;
+            border: 0;
+            background-color: transparent;
+}
+.icon-close-button{
+      
+      background-color: white;
+      border: transparent;
+}
 .mobile-menu {
       visibility: hidden;
       position: absolute;
@@ -56,21 +71,22 @@
       transition: transform var(--animatiom-btn),
             visibility var(--animatiom-btn);
 
-      &.is-open {
-            position: fixed;
-            visibility: visible;
-            display: block;
-            transform: translateY(0);
-
-            @media screen and (min-width: 768px) {
-                  display: none;
-            }
-      }
 
       &__block {
             display: flex;
             flex-direction: column;
             height: 100%;
+      }
+}
+
+.mobile-menu.is-open {
+      position: fixed;
+      visibility: visible;
+      display: block;
+      transform: translateY(0);
+
+      @media screen and (min-width: 768px) {
+            display: none;
       }
 }
 
