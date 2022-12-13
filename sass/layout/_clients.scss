@@ -1,10 +1,13 @@
 /*our clients*/
-
+/*flex-basis: calc((100% - кол-во маржинов в строке * значение маржина) / кол-во элементов в строке);*/
 .clients-list {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      align-items: center;
       gap: 30px;
       &__item {
+            
                   @include d-flex-center;
             }
       &__link {

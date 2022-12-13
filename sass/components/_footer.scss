@@ -1,18 +1,38 @@
 /*footer*/
 .footer {
-      padding: 60px;
+      padding: 60px 0;
       background-color: var(--hero-background-color);
+      text-align: center;
 }
 
 .footer-wrapper {
-      display: flex;
-      align-items: baseline;
+      display: block;
+      @media screen and (min-width: 1200px) {
+            display: flex;
+                  align-items: baseline;
+      }
+      
 }
-
+.footer-tablet{
+      @media screen and (min-width:768px) {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-around;
+      }
+      @media screen and (min-width: 1200px) {
+                  display: flex;
+                  align-items: baseline;
+                  text-align: left;
+                  margin-bottom: 0;
+            }
+}
 .address {
       display: flex;
       flex-direction: column;
-      margin-right: 70px;
+      margin-bottom: 60px;
+      @media screen and (min-width:1200px){
+            margin-right: 70px;
+      }
       &__logo {
                   margin-bottom: 20px;
                   font-weight: 700;
@@ -50,6 +70,8 @@
 /*приєднуємся*/
 
 .footer-social{
+display: flex;   
+flex-direction: column;
       &__title {
                   color: var(--white);
                   font-weight: 700;
@@ -63,6 +85,7 @@
             display: flex;
             justify-content: center;
             gap: 10px;
+            margin-bottom: 60px;
       }
       &__item {
             @include d-flex-center;
@@ -89,19 +112,30 @@
 }
 
 .footer-form {
-      margin-top: 20px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
       gap: 12px;
+      @media screen and (min-width:1200px) {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+      }
+      
       &__label {
                   font-weight: 700;
                   font-size: 14px;
                   line-height: 1.14;
                   text-transform: uppercase;
                   color: var(--white);
+                  @media screen and (min-width:1200px) {
+                              text-align: start;
+                        }
             }
       &__input {
-            width: 358px;
+            width: 450px;
             box-sizing: border-box;
             border: 1px solid rgba(255, 255, 255, 0.3);
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -110,6 +144,9 @@
             padding-top: 15px;
             padding-bottom: 15px;
             padding-left: 16px;
+            @media screen and (min-width: 1200px){
+                  width: 358px;
+            }
             &::placeholder {
                         padding-right: 0;
                         font-weight: 400;

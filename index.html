@@ -17,7 +17,26 @@
     <header class="header">
       <div class="container header-container">
         <nav class="site-nav">
-          <a href="./index.html" class="site-nav__logo"><span class="accent">Web</span>Studio</a>
+          <div class="mobile-header">
+            <a href="./index.html" class="site-nav__logo"><span class="accent">Web</span>Studio</a>
+          </div>
+          <button
+            type="button"
+            class="mobile-button__menu"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="mobile-button__icon"
+              height="40"
+              width="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-menu" href="./images/mobile-icons.svg#icon-menu_40px"></use>
+              <use class="icon-close" href="./images/mobile-icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
 
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -55,7 +74,7 @@
 
     <main>
       <!--Герой-->
-      <section class="hero">
+      <section class="hero ">
         <h1 class="hero__title">
           Ефективні рішення для <br />
           вашого бізнесу
@@ -115,9 +134,9 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section class="section hidden">
         <div class="container">
-          <h2 class="section__title">Чим ми займаємося</h2>
+          <h2 class="task__title">Чим ми займаємося</h2>
           <ul class="task">
             <li class="task__images">
               <div class="task__thumb">
@@ -355,7 +374,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <div class="address">
+          <div class="footer-tablet">
+            <div class="address">
             <a href="./index.html" class="address__logo"><span class="accent">Web</span>Studio</a>
             <address class="address__direction">
               м. Київ, пр-т Лесі Українки, 26
@@ -398,6 +418,7 @@
               </li>
             </ul>
           </div>
+          </div>
           <form class="form">
             <label for="user-email" class="footer-form__label">Підпишіться на розсилку </label>
             <div class="footer-form">
@@ -419,6 +440,59 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu" data-menu id="mobile-menu">
+        <div class="mobile-menu__block">
+
+            <nav class="navigation-mobile">
+                <ul class="nav-links-mobile">
+                    <li class="nav-links__item--mobile"><a href="./index.html"
+                            class="nav-links__link--mobile nav-links__link--mobile--current">Студія</a>
+                    </li>
+                    <li class="nav-links__item--mobile"><a href="./portfolio.html"
+                            class="nav-links__link--mobile">Портфоліо</a>
+                    </li>
+                    <li class="nav-links__item--mobile"><a href="" class="nav-links__link--mobile">Контакти</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="mobile-menu__block--contacts">
+
+                <ul class="header-contacts-mobile">
+                    <li class="header-contacts__item--mobile">
+                        <a href="tel:+380961111111" class="header-contacts__link--mobile">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="header-contacts__item--mobile">
+                        <a href="mailto:info@devstudio.com" class="header-contacts__link--mail">
+                            info@devstudio.com</a>
+                    </li>
+
+                </ul>
+
+                <ul class="mobile-menu__social-network--list">
+                    <li class="mobile-menu__social-network--item"><a href=""
+                            class="mobile-menu__social-network--link">Instagram</a>
+                    </li>
+
+                    <li class="mobile-menu__social-network--item"><a href=""
+                            class="mobile-menu__social-network--link">Twitter</a>
+                    </li>
+
+                    <li class="mobile-menu__social-network--item"><a href=""
+                            class="mobile-menu__social-network--link">Facebook</a>
+                    </li>
+
+                    <li class="mobile-menu__social-network--item"><a href=""
+                            class="mobile-menu__social-network--link">LinkedIn</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close>
@@ -483,5 +557,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
